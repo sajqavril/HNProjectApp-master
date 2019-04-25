@@ -1,0 +1,50 @@
+<resources>
+
+    <string name="action_settings">查看列表</string>
+    <string name="action_login">重新登陆</string>
+    <string name="action_addplan">新增计划</string>
+    <string name="app_name">工作计划</string>
+    <string name="btnAddPlanTitle">新增计划</string>
+    <string name="btnPlanListTitle">计划列表</string>
+    <string name="StrPlanTitle">计划标题</string>
+    <string name="StrPlanContent">计划内容</string>
+    <string name="StrBeginDate">计划开始时间</string>
+    <string name="StrEndDate">计划结束时间</string>
+    <string name="StrBeginDateOpen">开始时间选择</string>
+    <string name="StrEndDateOpen">结束时间选择</string>
+    <string name="title_activity_plan_view">工作计划详情</string> <!--已创建-->
+    <string name="title_activity_plan_list">工作计划列表</string> <!--已创建-->
+    <string name="title_activity_login">登陆系统</string> <!--已创建-->
+    <string name="StrEndPercentage">完成进度</string>
+    <string name="StrRemark">备注说明</string>
+
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">输入账号</string>
+    <string name="prompt_username">输入姓名</string>
+    <string name="prompt_nickname">输入昵称</string>
+    <string name="prompt_password">输入密码</string>
+    <string name="action_sign_in">登陆系统</string>
+    <string name="prompt_oldpassword">输入旧密码</string>
+    <string name="prompt_newpassword">输入新密码</string>
+    <string name="prompt_verpassword">验证新密码</string>
+    <string name="action_edit_pwd">确认修改</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_verpassword">密码两次输入不匹配</string>
+    <string name="error_invalid_password">密码长度太短了</string>
+    <string name="error_incorrect_password">密码有误</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_add_percentage">新增计划完成进度信息</string> <!--已创建-->
+    <string name="title_activity_appplan">新增计划</string> <!--已创建-->
+    <string name="appbar_scrolling_view_behavior">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="title_activity_register">注册系统</string> <!--已创建-->
+    <string name="title_activity_team_list">我的团队</string>
+    <string name="change_pwd">修改密码</string>
+    <string name="test_text">聊天内容是这个样子的，今天我星期山飞啊飞老师讲课大</string>
+    <string name="type_message_here">请输入信息</string>
+    <string name="send">发送</string> <!--已创建-->
+</resources>

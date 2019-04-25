@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_dashboard"
+            android:title="我的信息" />
+        <item
+            android:id="@+id/nav_messages"
+            android:icon="@drawable/ic_message"
+            android:title="我的对话" />
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/ic_group"
+            android:title="我的团队" />
+        <item
+            android:id="@+id/nav_files"
+            android:icon="@drawable/ic_forum"
+            android:title="文件共享" />
+        <item
+            android:id="@+id/nav_change"
+            android:icon="@drawable/ic_build_user"
+            android:title="账号管理" />
+    </group>
+
+    <item android:title="模式切换">
+        <menu>
+            <item
+                android:id="@+id/SetDay"
+                android:icon="@drawable/ic_wb_sunny"
+                android:title="日间模式" />
+            <item
+                android:id="@+id/SetNight"
+                android:icon="@drawable/ic_brightness_4"
+                android:title="夜间模式" />
+        </menu>
+    </item>
+
+</menu>

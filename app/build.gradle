@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.jakewharton.butterknife'
+
+// 当前beta版本号
+ext.build_number = "beta1"
+
+// 显示的时间格式，形如20171110
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getDefault())
+}
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "as.hn.com.hnprojectapp"
+        minSdkVersion 23
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    // apk name def
+    android.applicationVariants.all {
+        outputs.all {
+            // 输出apk名称
+            def newApkName
+            if (buildType.zipAlignEnabled) {
+                newApkName = "HNProject_${defaultConfig.versionName}_${releaseTime()}_${buildType.name}.apk"
+            } else {
+                newApkName = "HNProject_${defaultConfig.versionName}_${releaseTime()}_${buildType.name}.apk"
+            }
+            outputFileName = newApkName
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "https://raw.githubusercontent.com/Pgyer/mvn_repo_pgyer/master" }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    api 'com.ayvytr:EasyAndroid:2.2.0'
+    api 'com.malinskiy:materialicons:1.0.2'
+    api 'com.github.vajro:MaterialDesignLibrary:1.6'
+    api 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.pgyersdk:sdk:2.8.1'
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.blankj:utilcode:1.19.0'
+    implementation 'com.github.mthli:Knife:v1.1'
+    implementation 'com.android.support:design:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation files('libs/ksoap2-android-assembly-3.6.2-jar-with-dependencies.jar')
+
+    implementation 'com.android.support:cardview-v7:27.1.1'
+
+    api 'io.jsonwebtoken:jjwt-api:0.10.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.10.5'
+    runtimeOnly('io.jsonwebtoken:jjwt-orgjson:0.10.5') {
+        exclude group: 'org.json', module: 'json' //provided by Android natively
+    }
+}

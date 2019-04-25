@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_activity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d8e0e8"
+    >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange">
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="@dimen/_48px"
+                    android:layout_height="48px"
+                    android:src="@drawable/arrow_back"
+                    android:layout_gravity="left"
+                    android:layout_margin="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1234"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:id="@+id/chat_title"
+                    android:layout_gravity="center"
+                    />
+                <ImageView
+                    android:id="@+id/menu_button"
+                    android:layout_width="48px"
+                    android:layout_height="48px"
+                    android:src="@drawable/detail_menu"
+                    android:layout_gravity="right"
+                    android:layout_margin="15dp"/>
+
+
+
+        </android.support.v7.widget.Toolbar>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chat_fragment_container"></FrameLayout>
+    </android.support.design.widget.AppBarLayout>
+
+</LinearLayout>

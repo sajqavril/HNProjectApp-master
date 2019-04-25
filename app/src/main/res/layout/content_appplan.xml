@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Appplan"
+    tools:showIn="@layout/activity_appplan">
+
+    <com.gc.materialdesign.views.ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <!-- FLAT BUTTON -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/StrPlanTitle" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#1E88E5" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="72dp">
+
+                <EditText
+                    android:id="@+id/txtTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_weight="7"
+                    android:ems="10"
+                    android:inputType="" />
+
+            </RelativeLayout>
+            <!-- RECTANGLE BUTTON -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/StrPlanContent" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#1E88E5" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="72dp">
+
+                <EditText
+                    android:id="@+id/txtContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_weight="7"
+                    android:ems="10"
+                    android:inputType="textMultiLine" />
+            </RelativeLayout>
+            <!-- SMALL FLOAT BUTTON -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/StrBeginDate" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#1E88E5" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="72dp">
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:inputType="" />
+
+                <Button
+                    android:id="@+id/btnDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/editText"
+                    android:text="日期选择" />
+            </RelativeLayout>
+
+            <!-- FLOAT BUTTON -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/StrEndDate" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#1E88E5" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="72dp">
+
+                <EditText
+                    android:id="@+id/editEndText"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:inputType="" />
+
+                <Button
+                    android:id="@+id/btnEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/editEndText"
+                    android:text="日期选择" />
+            </RelativeLayout>
+
+            <!-- FLOAT BUTTON -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp">
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/btSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_span="2"
+                    android:text="保存计划" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.gc.materialdesign.views.ScrollView>
+
+</android.support.constraint.ConstraintLayout>

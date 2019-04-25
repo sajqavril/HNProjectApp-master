@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--我的对话界面-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="@dimen/_48px"
+                android:layout_height="@dimen/_48px"
+                android:src="@drawable/arrow_back"/>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "我的对话"
+                android:textStyle="bold"
+                android:textSize="@dimen/_20dp"
+                android:id="@+id/chat_activity_title"/>
+            <ImageView
+                android:layout_width="48px"
+                android:layout_height="48px"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="right"
+                android:src="@drawable/add"
+                android:id="@+id/add_chat"
+                />
+
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <FrameLayout
+        android:id="@+id/chat_list_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></FrameLayout>
+
+</LinearLayout>

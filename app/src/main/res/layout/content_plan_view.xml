@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".PlanVIewActivity"
+    tools:showIn="@layout/activity_planview">
+
+    <com.gc.materialdesign.views.Card
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/lightcyan"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+
+            >
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/plan_info_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_span="2"
+                    android:padding="5dp"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/plan_info_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_span="2"
+                    android:padding="5dp"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/plan_info_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/plan_header"
+                    android:layout_margin="15dp"
+                    android:layout_span="2"
+                    android:lineSpacingExtra="5dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:stretchColumns="*">
+
+                <!--<TableLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:stretchColumns="*">-->
+
+                <!--<TableRow android:layout_marginTop="5dp">-->
+
+                <com.hn.gc.views.CircleProgressView
+                    android:id="@+id/endPercentage"
+                    android:layout_width="1dip"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="40dp" />
+
+                <com.hn.gc.views.CircleProgressView
+                    android:id="@+id/circleProgressbar"
+                    android:layout_width="1dip"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="40dp" />
+                <!--</TableRow>-->
+                <!--</TableLayout>-->
+            </TableRow>
+
+
+            <TableRow android:layout_marginTop="10dp">
+
+                <!--<TableLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:stretchColumns="*"-->
+                <!--android:padding="5dp">-->
+
+                <!--<TableRow android:layout_marginTop="5dp">-->
+
+                <Button
+                    android:id="@+id/btn_add_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:text="新增进度" />
+
+                <Button
+                    android:id="@+id/btn_view_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:text="查看进度"
+                    android:textColor="#7AD3E0" />
+                <!--</TableRow>-->
+                <!--</TableLayout>-->
+            </TableRow>
+
+        </TableLayout>
+    </com.gc.materialdesign.views.Card>
+
+</RelativeLayout>
